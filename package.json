@@ -1,10 +1,11 @@
 {
-  "name": "join_assets",
+  "name": "fgsl_assets",
   "version": "1.0.0",
-  "description": "",
+  "description": "assets para o backend do FGSL",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "production": "pm2 start app.js --name fgsl_assets"
   },
   "author": "Pedro Paulo",
   "dependencies": {
