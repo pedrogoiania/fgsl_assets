@@ -5,11 +5,13 @@ const bodyParser = require('body-parser')
 const multer = require('multer')
 const fileType = require('file-type')
 var multipart = require('connect-multiparty');
+const allowCors = require('./cors')
 var multipartMiddleware = multipart();
 const fs = require('fs')
 const app = express()
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
+app.use(allowCors)
 const router = express.Router()
 
 const port = process.env.PORT || 3026;
